@@ -46,6 +46,6 @@ Neste exercício você vai criar uma galeria de imagens.
   - Botões mostram a próxima imagem ou a anterior
   - Quando chegar na última imagem, voltar para a primeira
 - Você pode fazer de pelo menos 2 formas:
-  1. Ter apenas uma <img> e trocar o src dela para o da imagem corrente
-  1. Ter uma <img> para cada imagem exibidas numa linha e transladar de
+  1. Ter apenas uma `<img>` e trocar o src dela para o da imagem corrente
+  1. Ter uma `<img>` para cada imagem exibidas numa linha e transladar de
      acordo com a imagem corrente
