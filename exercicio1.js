@@ -1,12 +1,2 @@
-// Faça o exercício dos parágrafos aqui
-// Este arquivo ainda não está incluído no arquivo HTML
-
-function openParagraph(idParagraph, idButton) {
-    document.getElementById(idParagraph).classList.toggle('expandido');
-
-    if (document.getElementById(idButton).value === "+") {
-        document.getElementById(idButton).value = "-";
-    } else {
-        document.getElementById(idButton).value = "+";
-    }
-}
+// Faça o exercício da equação de GRAVITAÇÃO UNIVERSAL aqui
+// Este arquivo AINDA NÃO ESTÁ INCLUÍDO no arquivo HTML
