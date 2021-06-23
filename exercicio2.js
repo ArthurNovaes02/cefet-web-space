@@ -48,3 +48,20 @@ const imagens = [
     }
   ];
 
+  function nextImg(idImg) {
+    index++;
+    if (index >= todasAsImagens.length) {
+      index = 0;
+    }
+    urlImg = servidorDasImagens + todasAsImagens[index];
+    document.getElementById(idImg).src = urlImg;
+  }
+  
+  function prevImg(idImg) {
+    index--;
+    if (index < 0) {
+      index = todasAsImagens.length - 1;
+    }
+    urlImg = servidorDasImagens + todasAsImagens[index];
+    document.getElementById(idImg).src = urlImg;
+  }
