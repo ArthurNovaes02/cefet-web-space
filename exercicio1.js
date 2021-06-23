@@ -4,7 +4,6 @@
 btnCalc = document.querySelector('#calcular');
 
 btnCalc.addEventListener('click', () => {
-    console.log('opa');
     var G = document.querySelector('#constante');
     var M1 = document.querySelector('#massa1');
     var M2 = document.querySelector('#massa2');

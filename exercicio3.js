@@ -1,12 +1,15 @@
 // Faça o exercício dos PARÁGRAFOS aqui
 // Este arquivo AINDA NÃO ESTÁ INCLUÍDO no arquivo HTML
 
-function openParagraph(idParagraph, idButton) {
-    document.getElementById(idParagraph).classList.toggle('expandido');
+btnsExpansion = document.querySelectorAll('.botao-expandir-retrair');
 
-    if (document.getElementById(idButton).value === "+") {
-        document.getElementById(idButton).value = "-";
-    } else {
-        document.getElementById(idButton).value = "+";
-    }
-}
+btnsExpansion.forEach(btnExpansion => {
+    btnExpansion.addEventListener('click', (event) => {
+        document.getElementById(event.path[1].id).classList.toggle('expandido');
+        if (event.currentTarget.innerHTML === '+') {
+            event.currentTarget.innerHTML = '-';
+        } else {
+            event.currentTarget.innerHTML = '+';
+        }
+    })
+});
