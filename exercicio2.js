@@ -1,6 +1,5 @@
 // Faça o exercício da GALERIA DE IMAGENS aqui
 // Este arquivo AINDA NÃO ESTÁ INCLUÍDO no arquivo HTML
-
 const servidorDasImagens = 'https://fegemo.github.io/cefet-web/images/osiris';
 const imagens = [
     {
@@ -48,20 +47,31 @@ const imagens = [
     }
   ];
 
-  function nextImg(idImg) {
+  btnPrev = document.querySelector('#anterior');
+  btnNext = document.querySelector('#proximo');
+  var index = 0;
+  document.getElementById('slide').src = servidorDasImagens + '/' + imagens[index].arquivo;
+  document.getElementById('slide').alt = servidorDasImagens + '/' + imagens[index].descricao;
+
+  btnNext.addEventListener('click', () => {
     index++;
-    if (index >= todasAsImagens.length) {
+    if (index >= imagens.length) {
       index = 0;
     }
-    urlImg = servidorDasImagens + todasAsImagens[index];
-    document.getElementById(idImg).src = urlImg;
-  }
+    urlImg = servidorDasImagens + '/' + imagens[index].arquivo;
+    altImg = servidorDasImagens + '/' + imagens[index].descricao;
+    document.getElementById('slide').src = urlImg;
+    document.getElementById('slide').alt = altImg;
+
+  })
   
-  function prevImg(idImg) {
+  btnPrev.addEventListener('click', () => {
     index--;
     if (index < 0) {
-      index = todasAsImagens.length - 1;
+      index = imagens.length - 1;
     }
-    urlImg = servidorDasImagens + todasAsImagens[index];
-    document.getElementById(idImg).src = urlImg;
-  }
+    urlImg = servidorDasImagens + '/' + imagens[index].arquivo;
+    altImg = servidorDasImagens + '/' + imagens[index].descricao;
+    document.getElementById('slide').src = urlImg;
+    document.getElementById('slide').alt = altImg;
+  })
